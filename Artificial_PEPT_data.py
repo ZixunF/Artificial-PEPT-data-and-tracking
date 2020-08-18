@@ -66,7 +66,7 @@ if __name__ == "__main__":
         # get first random radian for one of the rays of spurious events
         radian1 = np.random.random() * 2 * np.pi - np.pi  
         # get second radian to set the angle between two rays 170 to 190 degree
-        radian2 = np.random.random() * 2 * np.pi - np.pi #radian1 + (np.pi * 120/180) + np.random.random() * 2 / 3
+        radian2 = radian1 + (np.pi * 30/180) + np.random.random() * 300 / 180
         ray1 = sp.Ray(sp.Point(x[j],y[j]), angle = radian1)
         ray2 = sp.Ray(sp.Point(x[j],y[j]), angle = radian2)
         #print(type(sp.intersection(mill_geom, ray1)),sp.intersection(mill_geom, ray1))
